@@ -71,28 +71,28 @@ function Profile() {
             <Col md={8} sm={12} className="d-flex justify-content-between img-column">
                 <img src={file} className="profile-image" alt="..."></img>
                 
-                <MdEdit size={30} className="rounded edit" onClick={handleShow}/>
+                <MdEdit size={30} className="rounded edit text-primary" onClick={handleShow}/>
             </Col>
         </Row>
         <Row className="justify-content-center mt-2">
             <Col md={4} sm={6}>
                 <Col>
-                    <h4>{profile.name}</h4>
+                    <h4 className={'text-primary'}>{profile.name}</h4>
                 </Col>
                 <Col className="d-flex justify-content-start">
-                    <HiLocationMarker size={30} className="p-1"/><p className="p-1 m-0">{profile.location}</p>
-                    <HiOfficeBuilding size={30} className="p-1"/><p className="p-1 m-0">{profile.position}</p>
+                      <HiLocationMarker size={30} className="p-1 text-primary" /><p className="p-1 m-0 text-primary">{profile.location}</p>
+                      <HiOfficeBuilding size={30} className="p-1 text-primary" /><p className="p-1 m-0 text-primary">{profile.position}</p>
                 </Col>
                 <Col>
-                    <p className="px-2">{profile.tagline}</p>
+                      <p className="px-2 text-primary">{profile.tagline}</p>
                 </Col>
             </Col>
             <Col md={4} sm={6} className="d-flex flex-wrap">
-                <p className="p-1 m-0" onClick={()=>handleAlertShow("LinkedIn Profile",profile.linkedin)}><BsLinkedin size={30} className="p-1"/>LinkedIn</p>
-                <p className="p-1 m-0" onClick={()=>handleAlertShow("GitHub Profile",profile.github)}><BsGithub size={30} className="p-1"/>GitHub</p>
-                <p className="p-1 m-0" onClick={()=>handleAlertShow("Portfolio",profile.website)}><BsGlobe size={30} className="p-1"/>Portfolio</p>
-                <p className="p-1 m-0" onClick={()=>handleAlertShow("Email Address",profile.email)}><HiOutlineMail size={30} className="p-1"/>Email</p>
-                <p className="p-1 m-0" onClick={()=>handleAlertShow("Contact Number",profile.contact)}><HiPhone size={30} className="p-1"/>Contact Number</p>
+                  <p className="p-1 m-0 text-primary" onClick={()=>handleAlertShow("LinkedIn Profile",profile.linkedin)}><BsLinkedin size={30} className="p-1"/>LinkedIn</p>
+                  <p className="p-1 m-0 text-primary" onClick={()=>handleAlertShow("GitHub Profile",profile.github)}><BsGithub size={30} className="p-1"/>GitHub</p>
+                  <p className="p-1 m-0 text-primary" onClick={()=>handleAlertShow("Portfolio",profile.website)}><BsGlobe size={30} className="p-1"/>Portfolio</p>
+                  <p className="p-1 m-0 text-primary" onClick={()=>handleAlertShow("Email Address",profile.email)}><HiOutlineMail size={30} className="p-1"/>Email</p>
+                  <p className="p-1 m-0 text-primary" onClick={()=>handleAlertShow("Contact Number",profile.contact)}><HiPhone size={30} className="p-1"/>Contact Number</p>
             </Col>
             
         </Row>
@@ -139,7 +139,7 @@ function Profile() {
             </Modal.Body>
 
             <Modal.Footer>
-                <button type="submit" className="rounded edit px-2" onClick={handleClose}>
+                <button type="submit" className="rounded edit px-2 bg-primary" onClick={handleClose}>
                     Save Changes
                 </button>
             </Modal.Footer>
